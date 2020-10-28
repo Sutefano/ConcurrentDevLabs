@@ -69,7 +69,7 @@ public class Rectangle {
 		return (this.length * 2) + (this.width * 2);
 	}
 	
-	public String printRectangle() {							//Prints out length in *
+	public void printRectangle() {							//Prints out length in *
 		for(int i = 0; i < this.length; i++) {					//The width for loop then places one * and another for loop within
 			System.out.print("*");;								//counts the length - 2 to fill it in with spaces
 		}														//another ending for loop then prints another row of *
@@ -86,7 +86,7 @@ public class Rectangle {
 			System.out.print("*");;
 		}
 		
-		return null;
+
 	}
 	
 	
