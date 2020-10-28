@@ -18,7 +18,7 @@ public class HotelRoom {
 		
 	}
 	
-	public HotelRoom(int roomNumber, String roomTyp , boolean occupancy, double rate) {
+	public HotelRoom(int roomNumber, String roomType , boolean occupancy, double rate) {
 		
 		setRoomNumber(roomNumber);
 		
@@ -28,7 +28,7 @@ public class HotelRoom {
 
 		setRate(rate);
 	}
-	
+		
 	/*
 	 * 
 	 */
@@ -54,7 +54,7 @@ public class HotelRoom {
 
 		
 	public boolean isOccupancy() {
-		OccupancyDecision();
+		OccupancyDecision();	
 		return occupancy;
 	}
 	
