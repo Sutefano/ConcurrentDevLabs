@@ -5,13 +5,13 @@ public class Rectangle {
 	/*
 	 * 
 	 */
-	
+	//Variables
 	private int length;
 	private int width;
 	/*
 	 * 
 	 */
-	
+	//Constructor
 	public Rectangle() {
 		
 	}
@@ -21,7 +21,7 @@ public class Rectangle {
 	 * 
 	 */
 	
-	
+	//Getters and Setters
 	public int getLength() {
 		
 		if(this.length <= 1) {
