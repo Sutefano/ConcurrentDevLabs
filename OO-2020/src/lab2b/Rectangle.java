@@ -61,17 +61,18 @@ public class Rectangle {
 		return "Length = " + getLength() + ", Width = " + getWidth() + ", Area = " + getArea() + ", Perimeter = " + getPerimeter(); 
 	}
 	
-	public int getArea() {
+	//Methods
+	public int getArea() {				
 		return this.length * this.width;
 	}
 	public int getPerimeter() {
 		return (this.length * 2) + (this.width * 2);
 	}
 	
-	public String printRectangle() {
-		for(int i = 0; i < this.length; i++) {
-			System.out.print("*");;
-		}
+	public String printRectangle() {							//Prints out length in *
+		for(int i = 0; i < this.length; i++) {					//The width for loop then places one * and another for loop within
+			System.out.print("*");;								//counts the length - 2 to fill it in with spaces
+		}														//another ending for loop then prints another row of *
 		
 		for(int i = 2; i < this.width; i++) {
 			System.out.print("\n*");;	
