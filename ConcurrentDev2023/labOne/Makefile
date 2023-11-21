@@ -9,7 +9,7 @@ CC=g++
 CFLAGS= -std=c++11 -pthread
 
 SIMPLE: helloThreads.cpp
-	g++ -std=c++11 -pthread helloThreads.cpp
+	g++ -std=c++11 -pthread helloThreads.cpp Semaphore.cpp
 
 
 CLEAN:
