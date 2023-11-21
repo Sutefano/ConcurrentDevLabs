@@ -8,8 +8,8 @@
 CC=g++
 CFLAGS= -std=c++11 -pthread
 
-SIMPLE: helloThreads.cpp
-	g++ -std=c++11 -pthread helloThreads.cpp
+SIMPLE: rendezvous.cpp
+	g++ -std=c++11 -pthread rendezvous.cpp Semaphore.cpp 
 
 
 CLEAN:
