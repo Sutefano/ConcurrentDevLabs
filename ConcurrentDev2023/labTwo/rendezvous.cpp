@@ -7,16 +7,25 @@
 /*! displays the first function in the barrier being executed */
 void task(std::shared_ptr<int> arrivedAtBarrier, std::shared_ptr<Semaphore> mutexSem,std::shared_ptr<Semaphore> barrierSem, int threadCount){
 
-  std::cout << "first " << std::endl;
-  mutexSem ->Wait();
-  
-  *arrivedAtBarrier+=1;
-  if(*arrivedAtBarrier == threadCount){
-    barrierSem ->Signal();
     
-  }
-  //put barrier code here
-  std::cout << "second" << std::endl;
+  std::cout << "Before Rendezvousn" << std::endl;
+    // Use the mutex to ensure proper updates to the shared variable
+    mutexSem->Wait();
+    *arrivedAtBarrier += 1;
+    mutexSem->Signal();
+
+    if (*arrivedAtBarrier == threadCount) {
+        // All threads have reached the rendezvous point, release them
+        for (int i = 0; i < threadCount; ++i) {
+            barrierSem->Signal();
+        }
+    }
+
+    // Wait at the rendezvous point
+    barrierSem->Wait();
+
+    // Continue execution after the rendezvous
+    std::cout << "After Rendezvous/n" << std::endl;
 }
 
 
